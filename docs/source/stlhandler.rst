@@ -6,4 +6,3 @@ Stlhandler
 .. autoclass:: StlHandler
     :members:
     :private-members:
-    :special-members:

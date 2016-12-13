@@ -6,4 +6,3 @@ Vtkhandler
 .. autoclass:: VtkHandler
     :members:
     :private-members:
-    :special-members:

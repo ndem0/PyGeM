@@ -6,4 +6,3 @@ Igeshandler
 .. autoclass:: IgesHandler
     :members:
     :private-members:
-    :special-members:
