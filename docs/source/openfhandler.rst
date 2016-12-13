@@ -6,4 +6,3 @@ Openfhandler
 .. autoclass:: OpenFoamHandler
     :members:
     :private-members:
-    :special-members:

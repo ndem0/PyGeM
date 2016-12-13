@@ -6,4 +6,3 @@ Nurbshandler
 .. autoclass:: NurbsHandler
     :members:
     :private-members:
-    :special-members:

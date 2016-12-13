@@ -6,4 +6,3 @@ Unvhandler
 .. autoclass:: UnvHandler
     :members:
     :private-members:
-    :special-members:

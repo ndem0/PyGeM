@@ -6,4 +6,3 @@ Stephandler
 .. autoclass:: StepHandler
     :members:
     :private-members:
-    :special-members:
