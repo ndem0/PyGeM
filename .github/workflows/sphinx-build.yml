@@ -31,7 +31,6 @@ jobs:
 
     - name: Create the new documentation
       uses: ammaraskar/sphinx-action@master
-      shell: bash
       with:
         docs-folder: "docs/"
         pre-build-command: "ls -l /usr/share"
