@@ -23,13 +23,15 @@ jobs:
 
     - name: Conda info
       shell: bash
-      run: conda info -a
+      run: |
+        conda info -a
+        ls -l /usr/share/miniconda/bin
 
     - name: Create the new documentation
       uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
-        build-command: "/usr/share/miniconda/sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html"
+        build-command: "/usr/share/miniconda/bin/sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
