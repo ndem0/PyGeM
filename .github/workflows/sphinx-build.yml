@@ -19,7 +19,7 @@ jobs:
 
     - name: Conda install dependecies
       shell: bash -l {0}
-      run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls sphinx_rtd_theme python=3.7
+      run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls sphinx_rtd_theme sphinx python=3.7
 
     - name: Conda info
       shell: bash
@@ -32,7 +32,7 @@ jobs:
       uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
-        pre-build-command: "conda activate"
+        pre-build-command: "/usr/share/miniconda/activate"
         build-command: "sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html"
 
     - name: Deploy
