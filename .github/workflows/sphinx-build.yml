@@ -22,10 +22,11 @@ jobs:
       run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls sphinx_rtd_theme sphinx python=3.7
 
     - name: Conda info
-      shell: bash
+      shell: bash -l {0}
       run: |
+        conda activate
         conda info -a
-        ls -l /usr/share/miniconda/bin
+        ls -l /usr/share/miniconda/condabin
         whereis sphinx-build
         sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html
 
