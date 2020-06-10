@@ -23,12 +23,8 @@ jobs:
 
     - name: Conda info
       shell: bash -l {0}
-      run: |
-        conda activate
-        conda info -a
-        ls -l /usr/share/miniconda/condabin
-        whereis sphinx-build
-        sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html
+      run: conda activate && conda info
+    #sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html
 
     - name: Create the new documentation
       uses: ammaraskar/sphinx-action@master
