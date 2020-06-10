@@ -19,16 +19,15 @@ jobs:
 
     - name: Conda install dependecies
       shell: bash -l {0}
-      run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls python=3.7
+      run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls sphinx_rtd_theme python=3.7
 
     - name: Conda info
-      shell: pwsh
+      shell: bash
       run: conda info -a
 
     - name: Create the new documentation
       uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: "python -m pip install pip sphinx_rtd_theme -U"
         docs-folder: "docs/"
 
     - name: Deploy
