@@ -27,12 +27,14 @@ jobs:
         conda info -a
         ls -l /usr/share/miniconda/bin
         whereis sphinx-build
+        sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html
 
     - name: Create the new documentation
       uses: ammaraskar/sphinx-action@master
+      shell: bash
       with:
         docs-folder: "docs/"
-        pre-build-command: "/usr/share/miniconda/activate"
+        pre-build-command: "ls -l /usr/share"
         build-command: "sphinx-build -b html -d build/doctrees  --keep-going --no-color -w '/tmp/sphinx-log' source build/html"
 
     - name: Deploy
