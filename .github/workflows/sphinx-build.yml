@@ -19,10 +19,10 @@ jobs:
 
     - name: Conda install dependecies
       shell: bash -l {0}
-      run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls python=3.7
+      run: conda install --yes -c conda-forge pythonocc-core=7.4.0 numpy scipy matplotlib vtk nose setuptools coveralls sphinx sphinx_rtd_theme python=3.7
 
     - name: Conda info
-      shell: pwsh
+      shell: bash -l {0}
       run: conda info -a
 
     - name: Create the new documentation
